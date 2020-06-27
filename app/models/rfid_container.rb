@@ -1,0 +1,2 @@
+class RfidContainer < ApplicationRecord
+end
