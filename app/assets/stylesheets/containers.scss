@@ -1,0 +1,66 @@
+header {
+  height: auto;
+  width: 100%;
+  background-color: gray;
+  h1 {
+    color: white;
+  }
+}
+
+p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.search_parts {
+  display: block;
+  background-color: rgb(173, 217, 247);
+  border: 3px solid;
+  padding: 10px;
+  &_date {
+    display: flex;
+  }
+  &_button {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    margin-right: 30px;
+    .btn {
+      padding: 10px;
+      width: 100px;
+      font-size: 15px
+    }
+  }
+  &_option {
+    input {
+      margin-right: 15px;
+    }
+  }
+
+  .daily_parts {
+    margin-right: 100px;
+    margin-bottom: 30px;
+  }
+}
+
+.search_result_area {
+  display: flex;
+  &_daily {
+    margin-right: 10%;
+  }
+}
+
+table th{
+  padding : 20px 10px;
+}
+
+table td{
+  padding : 20px 10px;
+}
+
+th,td{
+  color:white;
+  background-color: #494a4b;
+}
+
+

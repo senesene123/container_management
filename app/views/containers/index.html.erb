@@ -1,0 +1,103 @@
+<header>
+  <h1>コンテナ在庫照会</h1>
+</header>
+<%= form_with url: containers_path, method: :get, local: true  do |f| %>
+  <div class="search_area">
+    <p>検索条件　※日報・月報いずれか一つは選択してください。（両方選択可）</p>
+    <div class="search_parts">
+      <div class="search_parts_date">
+        <div class="daily_parts">
+          <div class="checkbox_part">
+            <%= f.check_box :nippo_flg %>
+            <%= f.label :nippo_flg, '日報' %>
+          </div>
+          <div class="text_part">
+            <%= f.label :daily, '日付' %>
+            <%= f.text_field :daily, :class=>"nippo_label" %>
+          </div>
+        </div>
+        <div class="monthly_parts">
+          <div class="checkbox_part">
+            <%= f.check_box :geppo_flg %>
+            <%= f.label :geppo_flg, '月報' %>
+          </div>
+          <div class="text_part">
+            <%= f.label :monthly, '年月' %>
+            <%= f.text_field :monthly %>
+          </div>
+        </div>
+      </div>
+      <div class="search_parts_option">
+        <%= f.label :entering_date, '入庫日時' %>
+        <%= f.text_field :entering_date, :class=>"nyuko_label" %>
+        <%= f.label :leaving_date, '出庫日時' %>
+        <%= f.text_field :leaving_date, :class=>"syukko_label" %>
+        <%= f.label :type, '野菜の種類' %>
+        <%= f.text_field :type %>
+        <%= f.label :from_place, '入荷元' %>
+        <%= f.text_field :from_place %>
+        <%= f.label :to_place, '出荷先' %>
+        <%= f.text_field :to_place %>
+      </div>
+      <div class="search_parts_button">
+        <%= f.submit '検索', :class=>"btn" %>
+      </div>
+    </div>
+  </div>
+<% end %>
+<div class="search_result_area">
+  <div class="search_result_area_daily">
+    <h1>日報</h1>
+    <table>
+      <tr>
+        <th>コンテナ番号</th>
+        <th>入庫日時</th>
+        <th>出庫日時</th>
+        <th>野菜の種類</th>
+        <th>入荷元</th>
+        <th>出荷先</th>
+      </tr>
+      <% if @containers.empty? %>
+          該当のコンテナは存在しません。
+      <% else %>
+        <tr>
+          <% @containers.each do |container| %>
+            <td><%= container.id %></td>
+            <td><%= container.entering_date %></td>
+            <td><%= container.leaving_date %></td>
+            <td><%= container.contents %></td>
+            <td><%= container.from_place %></td>
+            <td><%= container.to_place %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+  <div class="search_result_area_monthly">
+    <h1>月報</h1>
+    <table>
+      <tr>
+        <th>コンテナ番号</th>
+        <th>入庫日時</th>
+        <th>出庫日時</th>
+        <th>野菜の種類</th>
+        <th>入荷元</th>
+        <th>出荷先</th>
+      </tr>
+      <% if @containers.empty? %>
+        該当のコンテナは存在しません。
+      <% else %>
+        <tr>
+          <% @containers.each do |container| %>
+            <td><%= container.id %></td>
+            <td><%= container.entering_date %></td>
+            <td><%= container.leaving_date %></td>
+            <td><%= container.contents %></td>
+            <td><%= container.from_place %></td>
+            <td><%= container.to_place %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
