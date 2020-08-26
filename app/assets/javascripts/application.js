@@ -17,4 +17,5 @@
 //= require jquery-ui/i18n/datepicker-ja
 //= require activestorage
 //= require turbolinks
+//= require bootstrap-sprockets
 //= require_tree .

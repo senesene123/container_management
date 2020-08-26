@@ -1,20 +1,33 @@
+require 'search_form'
+
 class ContainersController < ApplicationController
+  include ContainersHelper
+
   def index
-    @search_pramas = input_paramas
-    @containers = RfidContainer.search(@search_pramas)
+    @search_params = {}
+    @flg_params = ::SearchForm.new()
+    @containers_daily = RfidContainer.new
+    @containers_monthly = RfidContainer.new
+  end
+
+  def search
+    @search_params = input_paramas
+    @flg_params = ::SearchForm.new(nippo_flg: @search_params[:nippo_flg], geppo_flg: @search_params[:geppo_flg])
+    @containers_daily = RfidContainer.search_daily(@search_params) if @search_params[:nippo_flg]
+    @containers_monthly = RfidContainer.search_monthly(@search_params) if @search_params[:geppo_flg]
   end
 
   private
 
   def input_paramas
-    params.require(:u).permit(
+    params.fetch(:container, {}).permit(
       :nippo_flg,
       :geppo_flg,
       :daily,
-      :monthly, 
+      :monthly,
       :entering_date,
       :leaving_date,
-      :type,
+      :contents,
       :from_place,
       :to_place
     )
