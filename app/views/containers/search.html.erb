@@ -16,7 +16,7 @@
         </tr>
       </thead>
       <tbody>
-        <% if !nippo_flg_check || @containers_daily.nil? %>
+        <% if @search_params[:nippo_flg] != '1' || @containers_daily.nil? %>
         <% else %>
           <% @containers_daily.each do |container| %>
             <tr>
@@ -46,7 +46,7 @@
         </tr>
       </thead>
       <tbody>
-        <% if !geppo_flg_check ||@containers_monthly.nil? %>
+        <% if @search_params[:geppo_flg] != '1' ||@containers_monthly.nil? %>
         <% else %>
           <% @containers_monthly.each do |container| %>
             <tr>

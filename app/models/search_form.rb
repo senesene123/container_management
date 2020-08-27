@@ -8,6 +8,7 @@ class SearchForm
 
   def flg_check
     return true unless nippo_flg == '0' && geppo_flg == '0'
-    errors.add(:nippo_flg, "日報または月報にチェックを入れてください。")
+
+    errors.add(:nippo_flg, '日報または月報にチェックを入れてください。')
   end
 end

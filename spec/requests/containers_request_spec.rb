@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe 'Containers', type: :request do
-  describe 'GET /index' do
+  describe 'GET /' do
     it 'returns http success' do
-      get '/containers/index'
+      get '/containers'
       expect(response).to have_http_status(:success)
     end
   end
