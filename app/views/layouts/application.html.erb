@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AppName</title>
+    <title>在庫照会</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.0/js/jquery.tablesorter.min.js"></script>
   </head>
 
   <body>
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="navbar-brand">コンテナ在庫照会</div>
+    </div>
     <%= yield %>
   </body>
 </html>

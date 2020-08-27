@@ -33,6 +33,10 @@ Documentation:
 ClassAndModuleChildren:
   Enabled: false
 
+MethodLength:
+  CountComments: false  # count full line comments?
+  Max: 20
+
 # 文字リテラルのイミュータブル宣言を無視（freezeになるのはRuby3以降）
 Style/FrozenStringLiteralComment:
   Enabled: false

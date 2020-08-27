@@ -11,7 +11,10 @@ services:
       - "3306:3306"
     volumes:
       - .mysql-data:/var/lib/mysql
+    command: --innodb-use-native-aio=0
   web:
+    stdin_open: true
+    tty: true
     environment:
       - SPROCKETS_CACHE=/cache
     build: .
