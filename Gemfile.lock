@@ -48,14 +48,14 @@ GEM
       io-like (~> 0.3.0)
     arel (9.0.0)
     ast (2.4.1)
-    autoprefixer-rails (9.8.6.1)
+    autoprefixer-rails (9.8.6.3)
       execjs
     bindex (0.8.1)
     bootsnap (1.4.6)
       msgpack (~> 1.0)
-    bootstrap-sass (3.3.7)
+    bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
-      sass (>= 3.3.4)
+      sassc (>= 2.0.0)
     builder (3.2.4)
     byebug (11.1.1)
     capybara (3.32.1)
@@ -86,7 +86,7 @@ GEM
       railties (>= 3.2, < 6.1)
     erubi (1.9.0)
     execjs (2.7.0)
-    ffi (1.12.2)
+    ffi (1.13.1)
     font-awesome-sass (5.13.0)
       sassc (>= 1.11)
     globalid (0.4.2)
@@ -173,7 +173,7 @@ GEM
       activesupport (>= 5.2.1)
       i18n
       polyamorous (= 2.3.2)
-    rb-fsevent (0.10.3)
+    rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (1.7.0)
@@ -269,7 +269,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)
-  bootstrap-sass (~> 3.3.6)
+  bootstrap-sass (~> 3.4.1)
   byebug
   capybara (>= 2.15)
   chromedriver-helper
