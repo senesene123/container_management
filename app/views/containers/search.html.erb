@@ -7,10 +7,12 @@
     <table class="table table-list sort-table">
       <thead>
         <tr>
+          <th>状況</th>
           <th>コンテナ番号</th>
           <th>入庫日時</th>
           <th>出庫日時</th>
           <th>野菜の種類</th>
+          <th>サイズ</th>
           <th>入荷元</th>
           <th>出荷先</th>
         </tr>
@@ -20,10 +22,12 @@
         <% else %>
           <% @containers_daily.each do |container| %>
             <tr>
-              <td><%= container.id %></td>
+              <td><%= container.entering_condition %></td>
+              <td><%= container.container_id %></td>
               <td><%= container.entering_date %></td>
               <td><%= container.leaving_date %></td>
               <td><%= container.contents %></td>
+              <td><%= container.contents_size %></td>
               <td><%= container.from_place %></td>
               <td><%= container.to_place %></td>
             </tr>
@@ -37,10 +41,12 @@
     <table class="table table-list sort-table">
       <thead>
         <tr>
+          <th>状況</th>
           <th>コンテナ番号</th>
           <th>入庫日時</th>
           <th>出庫日時</th>
           <th>野菜の種類</th>
+          <th>サイズ</th>
           <th>入荷元</th>
           <th>出荷先</th>
         </tr>
@@ -50,10 +56,12 @@
         <% else %>
           <% @containers_monthly.each do |container| %>
             <tr>
-              <td><%= container.id %></td>
+              <td><%= container.entering_condition %></td>
+              <td><%= container.container_id %></td>
               <td><%= container.entering_date %></td>
               <td><%= container.leaving_date %></td>
               <td><%= container.contents %></td>
+              <td><%= container.contents_size %></td>
               <td><%= container.from_place %></td>
               <td><%= container.to_place %></td>
             </tr>

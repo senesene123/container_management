@@ -12,7 +12,7 @@
         </ul>
       </div>
     <% end %>
-    <div class="row">
+    <div class="row necessary-input">
       <div class="col-sm-3">
         <div class="form-group">
           <div class="checkbox">
@@ -23,8 +23,8 @@
           </div>
         </div>
         <div class="form-group">
-          <label class="col-sm-4 control-label" for="">日付</label>
-          <div class="col-sm-8">
+          <label class="col-sm-5 control-label" for="">日付</label>
+          <div class="col-sm-7">
             <%= f.text_field :daily, class: 'form-control nippo-label', autocomplete: "off", value: @search_params[:daily] %>
           </div>
         </div>
@@ -40,7 +40,7 @@
         </div>
         <div class="form-group">
           <label class="col-sm-4 control-label" for="">年月</label>
-          <div class="col-sm-8">
+          <div class="col-sm-7">
             <%= f.text_field :monthly, class: 'form-control', :placeholder => "1990-01", value: @search_params[:monthly] %>
           </div>
         </div>
@@ -49,29 +49,44 @@
     <div class="row">
       <div class="col-sm-3">
         <div class="form-group">
+          <label class="col-sm-5 control-label" for="">入出庫状況</label>
+          <div class="col-sm-7">
+            <%= f.select :entering_flg, {'入庫中': 1, '出庫済': 0}, { include_blank: true, selected: @search_params[:entering_flg]}, {class: 'form-control'} %>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label class="col-sm-5 control-label" for="">コンテナ番号</label>
+          <div class="col-sm-7">
+            <%= f.text_field :container_id, class: 'form-control', autocomplete: "off", value: @search_params[:container_id] %>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="form-group">
           <label class="col-sm-4 control-label" for="">入庫日時</label>
-          <div class="col-sm-8">
+          <div class="col-sm-7">
             <%= f.text_field :entering_date, class: 'form-control entering-label', autocomplete: "off", value: @search_params[:entering_date] %>
           </div>
         </div>
 
         <div class="form-group">
           <label class="col-sm-4 control-label" for="">出庫日時</label>
-          <div class="col-sm-8">
+          <div class="col-sm-7">
             <%= f.text_field :leaving_date, class: 'form-control leaving-label', autocomplete: "off", value: @search_params[:leaving_date] %>
           </div>
         </div>
       </div>
       <div class="col-sm-3">
         <div class="form-group">
-          <label class="col-sm-4 control-label" for="">入荷元</label>
+          <label class="col-sm-3 control-label" for="">入荷元</label>
           <div class="col-sm-8">
             <%= f.text_field :from_place, class: 'form-control', value: @search_params[:from_place] %>
           </div>
         </div>
 
         <div class="form-group">
-          <label class="col-sm-4 control-label" for="">出荷先</label>
+          <label class="col-sm-3 control-label" for="">出荷先</label>
           <div class="col-sm-8">
             <%= f.text_field :to_place, class: 'form-control', value: @search_params[:to_place] %>
           </div>
@@ -79,16 +94,23 @@
       </div>
       <div class="col-sm-3">
         <div class="form-group">
-          <label class="col-sm-5 control-label" for="">野菜の種類</label>
-          <div class="col-sm-7">
+          <label class="col-sm-4 control-label" for="">野菜の種類</label>
+          <div class="col-sm-8">
             <%= f.text_field :contents, class: 'form-control', value: @search_params[:contents] %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-4 control-label" for="">サイズ</label>
+          <div class="col-sm-8">
+            <%= f.select :contents_size, {'S': 'S', 'M': 'M', 'L': 'L'}, {include_blank: true, selected: @search_params[:contents_size]}, {class: 'form-control'} %>
           </div>
         </div>
       </div>
     </div>
     <div class="col-sm-12 row text-center">
       <button class="btn btn-default btn-left clear-form" type="button">クリア</button>
-      <button class="btn btn-default btn-primary" type="submit"><i class="fa fa-search"></i> 検索</button>
+      <button class="btn btn-default btn-success" type="submit"><i class="fa fa-search"></i> 検索</button>
     </div>
   </div>
 </div>

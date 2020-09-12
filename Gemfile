@@ -38,6 +38,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'dotenv-rails'
 gem 'gon'
 
+gem 'activemodel-serializers-xml'
+gem 'draper'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
