@@ -3,6 +3,9 @@ class RfidContainer < ApplicationRecord
     return if search_params.blank?
 
     daily_at(search_params[:daily])
+      .container_id_is(search_params[:container_id])
+      .contents_size_at(search_params[:contents_size])
+      .entering_flg_at(search_params[:entering_flg])
       .entering_date_at(search_params[:entering_date])
       .leaving_date_at(search_params[:leaving_date])
       .type_is(search_params[:contents])
@@ -14,6 +17,9 @@ class RfidContainer < ApplicationRecord
     return if search_params.blank?
 
     monthly_at(search_params[:monthly])
+      .container_id_is(search_params[:container_id])
+      .contents_size_at(search_params[:contents_size])
+      .entering_flg_at(search_params[:entering_flg])
       .entering_date_at(search_params[:entering_date])
       .leaving_date_at(search_params[:leaving_date])
       .type_is(search_params[:contents])
@@ -37,6 +43,11 @@ class RfidContainer < ApplicationRecord
                          where('created_at LIKE ?', "%#{date.strftime('%Y-%m')}%")
                        end
                      }
+  scope :container_id_is, lambda { |container_id|
+                            where('container_id LIKE ?', "%#{container_id}%") if container_id.present?
+                          }
+  scope :contents_size_at, ->(contents_size) { where(contents_size: contents_size) if contents_size.present? }
+  scope :entering_flg_at, ->(entering_flg) { where(entering_flg: entering_flg) if entering_flg.present? }
   scope :entering_date_at, ->(entering_date) { where(entering_date: entering_date) if entering_date.present? }
   scope :leaving_date_at, ->(leaving_date) { where(leaving_date: leaving_date) if leaving_date.present? }
   scope :type_is, ->(contents) { where('contents LIKE ?', "%#{contents}%") if contents.present? }
