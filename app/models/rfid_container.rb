@@ -71,6 +71,6 @@ class RfidContainer < ApplicationRecord
   scope :entering_date_at, ->(entering_date) { where(entering_date: entering_date) if entering_date.present? }
   scope :leaving_date_at, ->(leaving_date) { where(leaving_date: leaving_date) if leaving_date.present? }
   scope :type_is, ->(contents) { where(contents: contents) if contents.present? }
-  scope :from_place_like, ->(from) { where(from: from) if from.present? }
-  scope :to_place_like, ->(to) { where(to: to) if to.present? }
+  scope :from_place_like, ->(from) { where(from_place: from) if from.present? }
+  scope :to_place_like, ->(to) { where(to_place: to) if to.present? }
 end
