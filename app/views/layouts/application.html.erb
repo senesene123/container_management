@@ -13,7 +13,13 @@
   <body>
     <div class="navbar navbar-success bg-success">
       <div class="navbar-brand">コンテナ在庫照会</div>
+      <div class="navbar-collapse collapse navbar-responsive-collapse">
+        <ul class="nav navbar-nav">
+          <%= render 'shared/topnav_link' %>
+        </ul>
+      </div>
     </div>
+    <% if content_for?(:title) %><h4 class="page_title"><%= yield :title %></h4><% end %>
     <%= yield %>
   </body>
 </html>

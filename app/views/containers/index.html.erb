@@ -1,3 +1,8 @@
+<%= javascript_include_tag "containers.js" %>
+<% content_for(:title) do %>
+  在庫照会
+<% end %>
+
 <%= form_with scope: :container, url: search_containers_path, method: :get, local: true  do |f| %>
   <%= render 'search_form', f: f %>
 <% end %>
