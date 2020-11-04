@@ -14,6 +14,15 @@ module Dashboard
     end
 
     def edit
+      @vegetable = Vegetable.find_by(vegetable_id: input_params[:id])
+    end
+
+    def update
+      @vegetable = Vegetable.find_by(vegetable_id: input_params[:id])
+
+      @vegetable.vegetable_name = input_params[:vegetable_name]
+      @vegetable.save
+      @vegetables = Vegetable.all
     end
 
     def destroy

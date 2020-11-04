@@ -1,0 +1,8 @@
+<td><%= vegetable.vegetable_id %></td>
+<td>
+  <%= form_with(url: dashboard_vegetable_path(id: vegetable.vegetable_id), method: :put, remote: true) do |f| %>
+    <%= f.hidden_field :vegetable_id, :value => vegetable.vegetable_id %>
+    <%= f.text_field :vegetable_name, :placeholder => vegetable.vegetable_name %>
+    <%= f.submit :更新 %>
+  <% end %>
+</td>

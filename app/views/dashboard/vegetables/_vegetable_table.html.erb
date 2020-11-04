@@ -10,9 +10,12 @@
 
     <tbody>
       <% vegetables.each do |vegetable| %>
-        <tr>
+        <tr id="vegetable_<%= vegetable.vegetable_id %>" >
           <td><%= vegetable.vegetable_id %></td>
           <td><%= vegetable.vegetable_name %></td>
+          <td>
+            <%= link_to '編集', edit_dashboard_vegetable_path(id: vegetable.vegetable_id), method: :get, remote: true %>
+          </td>
           <td>
             <%= link_to '削除', dashboard_vegetable_path(id: vegetable.vegetable_id), method: :delete, 
                 data: { confirm: "本当に削除してもよろしいですか？", cancel: 'やめる', commit: '削除する'}, remote: true %>

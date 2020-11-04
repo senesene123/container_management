@@ -14,6 +14,15 @@ module Dashboard
     end
 
     def edit
+      @company = Company.find_by(company_id: input_params[:id])
+    end
+
+    def update
+      @company = Company.find_by(company_id: input_params[:id])
+
+      @company.company_name = input_params[:company_name]
+      @company.save
+      @companies = Company.all
     end
 
     def destroy
