@@ -1,0 +1,24 @@
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>企業ID</th>
+        <th>企業名</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% companies.each do |company| %>
+        <tr>
+          <td><%= company.company_id %></td>
+          <td><%= company.company_name %></td>
+          <td>
+            <%= link_to '削除', dashboard_company_path(id: company.company_id), method: :delete,
+              data: { confirm: "本当に削除してもよろしいですか？", cancel: 'やめる', commit: '削除する'}, remote: true %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

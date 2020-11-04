@@ -1,2 +1,0 @@
-class VegetablesController < ApplicationController
-end

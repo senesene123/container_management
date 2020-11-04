@@ -1,0 +1,2 @@
+$('#vegetable_area').html("<%= escape_javascript(render 'vegetable_table', vegetables: @vegetables) %>");
+$('#validation_area').html("<%= j(render 'error', { vegetable: @vegetable }) %>");

@@ -1,0 +1,2 @@
+$('#company_area').html("<%= escape_javascript(render 'company_table', companies: @companies) %>");
+$('#validation_area').html("<%= j(render 'error', { company: @company }) %>");

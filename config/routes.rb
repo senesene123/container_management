@@ -7,5 +7,8 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :master_datas, only: [:index]
+  namespace :dashboard do
+    resources :vegetables, only: [:index, :create, :edit, :update, :destroy]
+    resources :companies, only: [:index, :create, :edit, :update, :destroy]
+  end
 end
