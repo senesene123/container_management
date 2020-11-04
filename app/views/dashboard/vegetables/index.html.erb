@@ -1,0 +1,34 @@
+<div id="validation_area"></div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><i class="fa fa-database"></i> 野菜追加</h3>
+  </div>
+  <%= form_with(url: dashboard_vegetables_path, method: :post, remote: true) do |f| %>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>野菜ID</th>
+          <th>野菜名</th>
+        </tr>
+      </thead>
+      <tbody class="bulk-registration-form">
+        <tr class="item">
+          <td>
+            <%= f.text_field :vegetable_id, class: 'form-control' %>
+          </td>
+          <td>
+            <%= f.text_field :vegetable_name, class: 'form-control' %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="text-center submit-area">
+      <%= f.submit '追加', class: 'btn btn-success' %>
+    </div> 
+  <% end %>
+</div> 
+
+<h3>野菜一覧</h3>
+<div id="vegetable_area">
+  <%= render "vegetable_table", vegetables: @vegetables %>
+</div>

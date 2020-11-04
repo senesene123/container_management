@@ -1,0 +1,17 @@
+ja:
+  activerecord:
+    errors:
+      messages:
+        restrict_dependent_destroy:
+          has_many: すでにコンテナ情報として使用されているので削除できません。
+    models:
+      vegetable: 野菜
+      company: 企業
+    attributes:
+      dashboard/vegetable:
+        vegetable_id: 野菜ID
+        vegetable_name: 野菜名
+      dashboard/company:
+        company_id: 企業ID
+        company_name: 企業名
+        

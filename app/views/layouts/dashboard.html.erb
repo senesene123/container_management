@@ -19,7 +19,24 @@
         </ul>
       </div>
     </div>
+    <% content_for(:title) do %>
+      マスタ管理
+    <% end %>
     <% if content_for?(:title) %><h4 class="page_title"><%= yield :title %></h4><% end %>
-    <%= yield %>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <!-- PC用のメニュー部分 -->
+            <%= sidebar_list_items() %>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-md-offset-2 main">
+
+          <%= yield %>
+          
+        </div>
+      </div>
+    </div>
   </body>
 </html>
