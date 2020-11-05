@@ -2,7 +2,7 @@
 <td>
   <%= form_with(url: dashboard_company_path(id: company.company_id), method: :put, remote: true) do |f| %>
     <%= f.hidden_field :company_id, :value => company.company_id %>
-    <%= f.text_field :company_name, :placeholder => company.company_name %>
+    <%= f.text_field :company_name, :value => company.company_name %>
     <%= f.submit :更新 %>
   <% end %>
 </td>
