@@ -1,4 +1,4 @@
-Vegetable.create!(
+Dashboard::Vegetable.create!(
   [
     {
       vegetable_id: "0000001",
