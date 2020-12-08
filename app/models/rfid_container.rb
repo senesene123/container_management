@@ -1,6 +1,6 @@
 class RfidContainer < ApplicationRecord
-  belongs_to :companies
-  belongs_to :vegetables
+  belongs_to :companies, optional: true
+  belongs_to :vegetables, optional: true
 
   scope :search_daily, lambda { |search_params|
     return if search_params.blank?

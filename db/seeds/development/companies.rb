@@ -1,4 +1,4 @@
-Company.create!(
+Dashboard::Company.create!(
   [
     {
       company_id: "0000001",
