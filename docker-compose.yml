@@ -5,8 +5,9 @@ services:
     environment:
       MYSQL_HOST: 127.0.0.1
       MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: senecom
+      MYSQL_PASSWORD: senecom
       MYSQL_DATABASE: app_name_development
-      MYSQL_USERNAME: root
     ports:
       - "3306:3306"
     volumes:
