@@ -21,6 +21,8 @@ class RfidContainerDecorator < Draper::Decorator
       'M'
     when '00000003'
       'L'
+    else
+      '-'
     end
   end
 end
