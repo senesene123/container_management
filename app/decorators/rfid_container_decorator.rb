@@ -12,4 +12,15 @@ class RfidContainerDecorator < Draper::Decorator
       end
     end
   end
+
+  def contents_size_for_display
+    case contents_size
+    when '00000001'
+      'S'
+    when '00000002'
+      'M'
+    when '00000003'
+      'L'
+    end
+  end
 end
