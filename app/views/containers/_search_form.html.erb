@@ -103,7 +103,7 @@
         <div class="form-group">
           <label class="col-sm-4 control-label" for="">サイズ</label>
           <div class="col-sm-8">
-            <%= f.select :contents_size, {'S': 'S', 'M': 'M', 'L': 'L'}, {include_blank: true, selected: @search_params[:contents_size]}, {class: 'form-control'} %>
+            <%= f.select :contents_size, {'S': '00000001', 'M': '00000002', 'L': '00000003'}, {include_blank: true, selected: @search_params[:contents_size]}, {class: 'form-control'} %>
           </div>
         </div>
       </div>

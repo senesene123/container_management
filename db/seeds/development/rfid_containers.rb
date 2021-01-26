@@ -6,7 +6,7 @@ RfidContainer.create!(
       entering_date: "2020/06/28",
       leaving_date: "2020/07/01",
       contents: "0000001",
-      contents_size: "S",
+      contents_size: "00000001",
       from_place: "0000003",
       to_place: "0000004"
     },
@@ -16,7 +16,7 @@ RfidContainer.create!(
       entering_date: "2020/06/28",
       leaving_date: "2020/07/01",
       contents: "0000002",
-      contents_size: "M",
+      contents_size: "00000002",
       from_place: "0000002",
       to_place: "0000003"
     },
@@ -26,7 +26,7 @@ RfidContainer.create!(
       entering_date: "2020/05/28",
       leaving_date: "2020/06/01",
       contents: "0000001",
-      contents_size: "L",
+      contents_size: "00000003",
       from_place: "0000001",
       to_place: "0000002"
     },
@@ -36,7 +36,7 @@ RfidContainer.create!(
       entering_date: "2020/06/28",
       leaving_date: "2020/07/01",
       contents: "0000003",
-      contents_size: "S",
+      contents_size: "00000001",
       from_place: "0000001",
       to_place: "0000002"
     },
@@ -46,7 +46,7 @@ RfidContainer.create!(
       entering_date: "2020/06/28",
       leaving_date: "2020/07/01",
       contents: "0000001",
-      contents_size: "L",
+      contents_size: "00000003",
       from_place: "0000001",
       to_place: "0000002"
     },
@@ -56,7 +56,7 @@ RfidContainer.create!(
       entering_date: "2020/06/28",
       leaving_date: "2020/07/01",
       contents: "0000002",
-      contents_size: "M",
+      contents_size: "00000002",
       from_place: "0000001",
       to_place: "0000002"
     },
@@ -66,7 +66,7 @@ RfidContainer.create!(
       entering_date: "2020/06/28",
       leaving_date: "2020/07/01",
       contents: "0000001",
-      contents_size: "S",
+      contents_size: "00000001",
       from_place: "0000001",
       to_place: "0000002"
     },
@@ -76,7 +76,7 @@ RfidContainer.create!(
       entering_date: "2020/06/28",
       leaving_date: "2020/07/01",
       contents: "0000001",
-      contents_size: "L",
+      contents_size: "00000003",
       from_place: "0000001",
       to_place: "0000002"
     },
@@ -86,7 +86,7 @@ RfidContainer.create!(
       entering_date: "2020/06/28",
       leaving_date: "2020/07/01",
       contents: "0000002",
-      contents_size: "L",
+      contents_size: "00000003",
       from_place: "0000001",
       to_place: "0000002"
     },
@@ -96,7 +96,7 @@ RfidContainer.create!(
       entering_date: "2020/06/28",
       leaving_date: "2020/07/01",
       contents: "0000002",
-      contents_size: "M",
+      contents_size: "00000002",
       from_place: "0000001",
       to_place: "0000002"
     },
@@ -106,7 +106,7 @@ RfidContainer.create!(
       entering_date: "2020/06/28",
       leaving_date: "2020/07/01",
       contents: "0000002",
-      contents_size: "M",
+      contents_size: "00000002",
       from_place: "0000001",
       to_place: "0000002"
     },
@@ -116,7 +116,7 @@ RfidContainer.create!(
       entering_date: "2020/06/28",
       leaving_date: "2020/07/01",
       contents: "0000001",
-      contents_size: "M",
+      contents_size: "00000002",
       from_place: "0000001",
       to_place: "0000002"
     },
@@ -126,7 +126,7 @@ RfidContainer.create!(
       entering_date: "2020/06/28",
       leaving_date: "2020/07/01",
       contents: "0000001",
-      contents_size: "S",
+      contents_size: "00000001",
       from_place: "0000001",
       to_place: "0000002"
     },
@@ -136,7 +136,7 @@ RfidContainer.create!(
       entering_date: "2020/06/28",
       leaving_date: "2020/07/01",
       contents: "0000003",
-      contents_size: "L",
+      contents_size: "00000003",
       from_place: "0000001",
       to_place: "0000002"
     },
@@ -146,7 +146,7 @@ RfidContainer.create!(
       entering_date: "2020/06/28",
       leaving_date: "2020/07/01",
       contents: "0000002",
-      contents_size: "S",
+      contents_size: "00000001",
       from_place: "0000003",
       to_place: "0000005"
     },
@@ -156,7 +156,7 @@ RfidContainer.create!(
       entering_date: "2020/06/28",
       leaving_date: "2020/07/01",
       contents: "0000003",
-      contents_size: "M",
+      contents_size: "00000002",
       from_place: "0000001",
       to_place: "0000002"
     },
@@ -166,7 +166,7 @@ RfidContainer.create!(
       entering_date: "2020/06/28",
       leaving_date: "2020/07/01",
       contents: "0000002",
-      contents_size: "M",
+      contents_size: "00000002",
       from_place: "0000001",
       to_place: "0000002"
     },
@@ -176,7 +176,7 @@ RfidContainer.create!(
       entering_date: "2020/06/28",
       leaving_date: "2020/07/01",
       contents: "0000003",
-      contents_size: "S",
+      contents_size: "00000001",
       from_place: "0000001",
       to_place: "0000002"
     },
@@ -186,7 +186,7 @@ RfidContainer.create!(
       entering_date: "2020/06/28",
       leaving_date: "2020/07/01",
       contents: "0000001",
-      contents_size: "S",
+      contents_size: "00000001",
       from_place: "0000001",
       to_place: "0000002"
     },
@@ -196,7 +196,7 @@ RfidContainer.create!(
       entering_date: "2020/06/28",
       leaving_date: "2020/07/01",
       contents: "0000003",
-      contents_size: "M",
+      contents_size: "00000002",
       from_place: "0000001",
       to_place: "0000002"
     },
@@ -206,7 +206,7 @@ RfidContainer.create!(
       entering_date: "2020/06/28",
       leaving_date: "2020/07/01",
       contents: "0000002",
-      contents_size: "S",
+      contents_size: "00000001",
       from_place: "0000001",
       to_place: "0000002"
     }
