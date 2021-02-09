@@ -18,7 +18,8 @@ ActiveRecord::Schema.define(version: 2020_10_19_115357) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "rfid_containers", primary_key: "container_id", id: :string, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "rfid_containers", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "container_id"
     t.date "entering_date"
     t.date "leaving_date"
     t.string "contents", null: false

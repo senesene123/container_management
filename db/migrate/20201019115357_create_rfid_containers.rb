@@ -1,7 +1,7 @@
 class CreateRfidContainers < ActiveRecord::Migration[5.2]
   def change
     create_table :rfid_containers, id: false do |t|
-      t.string :container_id, :primary_key => true
+      t.string :container_id
       t.date :entering_date
       t.date :leaving_date
       t.string :contents, null: false
