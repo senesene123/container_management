@@ -203,8 +203,18 @@ RfidContainer.create!(
     {
       container_id: "0000021",
       entering_flg: false,
-      entering_date: "2020/06/28",
-      leaving_date: "2020/07/01",
+      entering_date: "2020/07/28",
+      leaving_date: "2020/08/01",
+      contents: "0000002",
+      contents_size: "00000001",
+      from_place: "0000001",
+      to_place: "0000002"
+    },
+    {
+      container_id: "0000021",
+      entering_flg: true,
+      entering_date: "2020/06/25",
+      leaving_date: "2020/07/28",
       contents: "0000002",
       contents_size: "00000001",
       from_place: "0000001",
